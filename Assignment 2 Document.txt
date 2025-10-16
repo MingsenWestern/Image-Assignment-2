@@ -1,0 +1,8 @@
+Assignment 2 Document
+
+Q3
+The version we did ourselves has four files: main.m, myintermeans_34.m, integration1.m, and integration2.m.
+The AI-generated version, on the other hand, only has two files: main.m and rc_intermeans.m.
+In the version we completed ourselves, we separated the integral calculation part to ensure the code is clear and easy to read.
+Within that integral section, we summed the components individually to get the final result. These are recomputed from scratch every loop over the requested index ranges.
+AI-generated version precomputes cumulative sums, and it has a robust I/O(convert any typical input to grayscale uint8)

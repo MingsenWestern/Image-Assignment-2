@@ -10,9 +10,10 @@ function thres = myintermeans_34(image)
         divisor1  = integration1(counts, bins, 1, previousT + 1);
         dividend2 = integration2(counts, bins, previousT + 2, 256);
         divisor2  = integration1(counts, bins, previousT + 2, 256);
-        if divisor1 == 0 || divisor2 == 0
-            break;
-        end
+        
+        u1 = dividend1 / (divisor1 + (divisor1 == 0));
+        u2 = dividend2 / (divisor2 + (divisor2 == 0));
+
         u1 = dividend1 / divisor1;
         u2 = dividend2 / divisor2;
         currentT = int16(round((u1+u2)/2));
